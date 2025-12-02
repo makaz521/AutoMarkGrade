@@ -1,0 +1,18 @@
+
+{% extends 'autograder/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <label for="marking_task">Select a Marking Task:</label>
+    <select id="marking_task" name="marking_task">
+        {% for task in marking_tasks %}
+            <option value="{{ task.id }}">{{ task.assign_title }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Mark Paper</button>
+</form>
+
+{% endblock content %}

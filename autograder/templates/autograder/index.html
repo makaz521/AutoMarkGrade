@@ -1,0 +1,56 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - Automated Marking and Grading System - Landing{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section mt-5 pt-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to Automark</h1>
+        <p class="lead">Revolutionizing the way assignments are marked and graded.</p>
+    
+        
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-upload"></i>
+                    <h3>Easy Submission</h3>
+                    <p>Students can easily submit their assignments online, saving time and effort.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Efficient Grading</h3>
+                    <p>Lecturers and auditors can efficiently grade assignments using automated tools.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Insightful Analytics</h3>
+                    <p>Gain insights into student performance and assignment trends with detailed analytics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <h2>Ready to streamline your grading process?</h2>
+                <a class="btn" style="background-color: gold;" href="{% url 'login' %}" role="button">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

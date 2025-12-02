@@ -1,0 +1,14 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - Auditor Portal{% endblock %}
+
+{% block content %}
+<h1>Write Report for "{{ marking_task.assign_title }}"</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="report_text">Report Text:</label><br>
+    <textarea id="report_text" name="report_text" rows="6" placeholder="Enter your report text here..." required></textarea><br>
+    <button type="submit">Submit Report</button>
+</form>
+{% endblock %}
+

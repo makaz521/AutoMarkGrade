@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+automark/Lib/
+automark/Include/
+automark/Scripts/
+automark/share/
+
+# Django
+db.sqlite3
+
+/staticfiles/
+/media/
+
+# VSCode
+.vscode/

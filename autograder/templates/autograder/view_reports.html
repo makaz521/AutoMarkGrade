@@ -1,0 +1,25 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - Auditor Portal{% endblock %}
+
+{% block content %}<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports for {{ marking_task.assign_title }}</title>
+</head>
+<body>
+    <h1>Reports for {{ marking_task.assign_title }}</h1>
+    <ul>
+        {% for report in reports %}
+            <li>
+                <strong>Lecturer:</strong> {{ report.lecturer.username }}<br>
+                <strong>Status:</strong> {{ report.status }}<br>
+                <strong>Report:</strong> {{ report.report_text }}<br>
+            </li>
+        {% empty %}
+            <li>No reports available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

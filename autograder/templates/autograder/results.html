@@ -1,0 +1,32 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - View Results{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <h1 class="mt-4">View Results</h1>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <h3>Marked Papers</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Paper Title</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for marked_paper in marked_papers %}
+                    <tr>
+                        <td><a href="{% url 'results' %}">{{ marked_paper.new_title }}</a></td>
+                        <td>{{ marked_paper.grade }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - Auditor Portal{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-4">Auditor Portal</h1>
+            <div class="card-deck mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">View Results</h5>
+                        <p class="card-text">View results of assignments.</p>
+                        <a href="{% url 'results' %}" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">View Lecturer Reports</h5>
+                        <p class="card-text">View reports provided by lecturers.</p>
+                        <a href="{% url 'view_reports' %}" class="btn btn-primary">View Reports</a>
+
+
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Auditor Report</h5>
+                        <p class="card-text">Create a new auditor report.</p>
+                        
+                        <a href="{% url 'create_report_for_auditor' %}" class="btn btn-primary">Create Report</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

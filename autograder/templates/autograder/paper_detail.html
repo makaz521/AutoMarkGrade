@@ -1,0 +1,28 @@
+<!-- papers/templates/papers/paper_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Detail</title>
+</head>
+<body>
+    <h1>Paper Detail</h1>
+    <p>Title: {{ lecture_report.title }}</p>
+    <!-- Display other details of the lecture report -->
+
+    <h2>Marked Papers</h2>
+    <ul>
+        {% for marked_paper in marked_papers %}
+            <li>
+                <strong>{{ marked_paper.paper_title }}</strong>
+                <ul>
+                    <li>Grade: {{ marked_paper.grade }}</li>
+                    <!-- Display other details of the marked paper -->
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

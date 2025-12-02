@@ -1,0 +1,53 @@
+{% extends 'autograder/base.html' %}
+
+{% block title %}Automark - Lecturer Portal{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mt-4 mb-4 text-center">Welcome to the Lecturer Portal</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card border-primary mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Upload Marking Scheme and Assignments</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Upload marking schemes and assignments for processing. Organize and structure your grading process efficiently.</p>
+                    <a href="{% url 'upload' %}" class="btn btn-primary btn-block">Upload</a>
+                    <!-- Add Mark button -->
+                    <a href="{% url 'mark' %}" class="btn btn-success btn-block mt-2">Mark and Grade</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-info mb-3">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">View Marked Papers and Results</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">View papers marked by the system and results of assignments. Access graded assignments, track student performance, and analyze class progress.</p>
+                    <a href="{% url 'results' %}" class="btn btn-info btn-block">View Papers & Results</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border-danger mb-3">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title mb-0">Provide Reports</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Provide reports on marked papers. Offer detailed insights and analysis to students to help them improve.</p>
+                    <a href="{% url 'write_report' marking_task_id=marking_task_id %}" class="btn btn-danger btn-block">Provide Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
